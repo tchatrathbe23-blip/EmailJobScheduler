@@ -86,8 +86,8 @@ async function startServer() {
     // Reconcile pending jobs after restart
     await schedulerService.reconcilePendingJobsOnStartup();
 
-    const server = app.listen(config.port, () => {
-      console.log(`✅ Backend server listening on http://localhost:${config.port}`);
+    const server = app.listen(config.port, '0.0.0.0', () => {
+      console.log(`✅ Backend server listening on port ${config.port}`);
       console.log(`📊 BullMQ Live Queue Dashboard: http://localhost:${config.port}/admin/queues`);
     });
 
