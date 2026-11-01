@@ -1,4 +1,4 @@
-# ReachInbox Email Scheduler Blueprint v2.0
+# ReachInbox Email Scheduler Blueprint v2.1
 services:
   # Managed Redis Instance
   - type: redis
@@ -47,10 +47,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: BACKEND_INTERNAL_URL
-        fromService:
-          type: web
-          name: reachinbox-scheduler-backend
-          property: host
+        value: https://reachinbox-scheduler-backend-5x7n.onrender.com
+      - key: NEXT_PUBLIC_API_URL
+        value: https://reachinbox-scheduler-backend-5x7n.onrender.com/api
 
 databases:
   - name: reachinbox-db
