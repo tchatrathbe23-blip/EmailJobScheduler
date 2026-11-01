@@ -12,6 +12,17 @@ const googleClient = new OAuth2Client(
 
 export class AuthController {
   /**
+   * Helper to dynamically get the frontend redirect URI based on the request origin
+   */
+  private static getRedirectUri(req: Request): string {
+    const origin = req.headers.origin || (req.headers.referer ? new URL(req.headers.referer).origin : '');
+    if (origin) {
+      return `${origin}/auth/callback`;
+    }
+    return config.googleRedirectUri || 'https://reachinbox-scheduler-frontend-5057.onrender.com/auth/callback';
+  }
+
+  /**
    * Get Google OAuth consent URL
    */
   public static getGoogleAuthUrl(req: Request, res: Response): void {
@@ -23,10 +34,13 @@ export class AuthController {
       return;
     }
 
+    const redirectUri = AuthController.getRedirectUri(req);
+
     const url = googleClient.generateAuthUrl({
       access_type: 'offline',
       scope: ['profile', 'email'],
       prompt: 'consent',
+      redirect_uri: redirectUri,
     });
 
     res.json({ url, isMock: false });
@@ -59,7 +73,11 @@ export class AuthController {
         }
       } else if (code && config.googleClientId && config.googleClientSecret) {
         // 2. Exchange code for tokens
-        const { tokens } = await googleClient.getToken(code);
+        const redirectUri = AuthController.getRedirectUri(req);
+        const { tokens } = await googleClient.getToken({
+          code,
+          redirect_uri: redirectUri,
+        });
         googleClient.setCredentials(tokens);
         if (tokens.id_token) {
           const ticket = await googleClient.verifyIdToken({
