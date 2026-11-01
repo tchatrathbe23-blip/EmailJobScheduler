@@ -1,4 +1,10 @@
 services:
+  # Managed Redis Instance
+  - type: redis
+    name: reachinbox-redis
+    plan: free
+    ipAllowList: []
+
   # Backend API & BullMQ Scheduler Worker
   - type: web
     name: reachinbox-scheduler-backend
@@ -43,12 +49,12 @@ services:
         value: production
       - key: PORT
         value: 3000
+      - key: BACKEND_INTERNAL_URL
+        fromService:
+          type: web
+          name: reachinbox-scheduler-backend
+          property: host
 
 databases:
   - name: reachinbox-db
     plan: free
-
-redis:
-  - name: reachinbox-redis
-    plan: free
-    ipAllowList: []
