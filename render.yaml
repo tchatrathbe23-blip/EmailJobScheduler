@@ -1,3 +1,4 @@
+# ReachInbox Email Scheduler Blueprint v2.0
 services:
   # Managed Redis Instance
   - type: redis
