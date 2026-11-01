@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { User, EmailJob, SenderConfig, DashboardStats } from './types';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+// Use relative path so requests route through Next.js proxy rewrite (/api/* → backend)
+// This works both locally and via any public tunnel/hosted URL.
+// Override with NEXT_PUBLIC_API_URL only if deploying backend separately.
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 const api = axios.create({
   baseURL: API_BASE,
