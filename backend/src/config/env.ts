@@ -9,6 +9,7 @@ export const config = {
   clientUrl: process.env.CLIENT_URL || 'http://localhost:3000',
 
   // Redis
+  redisUrl: process.env.REDIS_URL || '',
   redisHost: process.env.REDIS_HOST || '127.0.0.1',
   redisPort: parseInt(process.env.REDIS_PORT || '6379', 10),
   redisPassword: process.env.REDIS_PASSWORD || undefined,
