@@ -28,8 +28,15 @@ export const SlackModal: React.FC<SlackModalProps> = ({
 
   const handleOAuthConnect = async () => {
     try {
-      const { url } = await slackApi.getAuthUrl();
-      window.location.href = url;
+      const res = await slackApi.getAuthUrl();
+      if (!res.configured || !res.url) {
+        setFeedback({
+          type: 'error',
+          message: res.message || 'Slack OAuth is not configured. Please use the Incoming Webhook option below instead.',
+        });
+        return;
+      }
+      window.location.href = res.url;
     } catch (err: any) {
       setFeedback({ type: 'error', message: err.message || 'Failed to start Slack OAuth' });
     }

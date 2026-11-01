@@ -7,9 +7,14 @@ export class SlackController {
    * Get Slack OAuth authorization URL
    */
   public static getAuthUrl(req: Request, res: Response): void {
+    const clientId = process.env.SLACK_CLIENT_ID || '';
+    if (!clientId) {
+      res.json({ url: null, configured: false, message: 'Slack OAuth is not configured (SLACK_CLIENT_ID missing). Use the Incoming Webhook option instead.' });
+      return;
+    }
     const userId = req.user?.id || 'default';
     const url = slackService.getOAuthUrl(userId);
-    res.json({ url });
+    res.json({ url, configured: true });
   }
 
   /**
