@@ -48,6 +48,8 @@ services:
         value: production
       - key: BACKEND_INTERNAL_URL
         value: https://reachinbox-scheduler-backend-5x7n.onrender.com
+      - key: NEXT_PUBLIC_BACKEND_URL
+        value: https://reachinbox-scheduler-backend-5x7n.onrender.com
       - key: NEXT_PUBLIC_API_URL
         value: https://reachinbox-scheduler-backend-5x7n.onrender.com/api
 

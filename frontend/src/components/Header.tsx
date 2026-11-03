@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onOpenSlackModal
         <div className="flex items-center space-x-4">
           {/* BullMQ Dashboard Live Link */}
           <a
-            href="http://localhost:5000/admin/queues"
+            href={`${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000'}/admin/queues`}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-300 hover:text-white bg-gray-900 border border-gray-800 hover:border-gray-700 transition"
