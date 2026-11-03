@@ -15,11 +15,17 @@ export class AuthController {
    * Helper to dynamically get the frontend redirect URI based on the request origin
    */
   private static getRedirectUri(req: Request): string {
+    // When using Next.js proxy rewrites, the origin header is not forwarded.
+    // Priority: env var → request origin → production default
+    if (config.googleRedirectUri && !config.googleRedirectUri.includes('localhost:5000')) {
+      return config.googleRedirectUri;
+    }
     const origin = req.headers.origin || (req.headers.referer ? new URL(req.headers.referer).origin : '');
-    if (origin) {
+    if (origin && !origin.includes('localhost:5000')) {
       return `${origin}/auth/callback`;
     }
-    return config.googleRedirectUri || 'https://reachinbox-scheduler-frontend-5057.onrender.com/auth/callback';
+    // Always fall back to the Render frontend
+    return 'https://reachinbox-scheduler-frontend-5057.onrender.com/auth/callback';
   }
 
   /**
