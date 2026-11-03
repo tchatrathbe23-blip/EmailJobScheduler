@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReachInbox - Full-stack Email Job Scheduler Submission</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .header {
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-badge {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: #64748b;
+      margin: 2px 0 0 0;
+    }
+    .meta-box {
+      text-align: right;
+      font-size: 11px;
+      color: #475569;
+    }
+    .meta-box strong {
+      color: #0f172a;
+    }
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 700;
+      color: #4338ca;
+      border-left: 3px solid #6366f1;
+      padding-left: 8px;
+      margin: 18px 0 10px 0;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .link-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .link-card .title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .link-card a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 12px;
+      word-break: break-all;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 11.5px;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .badge-success {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .badge-primary {
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+    .features-list {
+      margin: 6px 0;
+      padding-left: 18px;
+    }
+    .features-list li {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    .code-pill {
+      background: #e2e8f0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 11px;
+      color: #0f172a;
+    }
+    .footer {
+      margin-top: 24px;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">
+      <div class="logo-badge">⚡</div>
+      <div>
+        <h1>ReachInbox &bull; Outbox Labs Assignment</h1>
+        <p class="subtitle">Full-stack Email Job Scheduler (Production-Grade Service & Dashboard)</p>
+      </div>
+    </div>
+    <div class="meta-box">
+      <div><strong>Candidate:</strong> Tarun Chatrath</div>
+      <div><strong>Target Role:</strong> SDE Intern (Full Stack)</div>
+      <div><strong>Submission Date:</strong> November 2026</div>
+    </div>
+  </div>
+
+  <!-- Key Links -->
+  <div class="section-title">1. Key Submission Deliverables & Live Links</div>
+  <div class="links-grid">
+    <div class="link-card">
+      <div class="title">🌐 Live Deployed Frontend (24/7 Cloud)</div>
+      <a href="https://reachinbox-scheduler-frontend-5057.onrender.com" target="_blank">
+        https://reachinbox-scheduler-frontend-5057.onrender.com
+      </a>
+    </div>
+    <div class="link-card">
+      <div class="title">📊 BullMQ Live Queue Dashboard</div>
+      <a href="https://reachinbox-scheduler-backend-5x7n.onrender.com/admin/queues" target="_blank">
+        https://reachinbox-scheduler-backend-5x7n.onrender.com/admin/queues
+      </a>
+    </div>
+    <div class="link-card">
+      <div class="title">🐙 GitHub Repository (Private with Access)</div>
+      <a href="https://github.com/tchatrathbe23-blip/EmailJobScheduler" target="_blank">
+        https://github.com/tchatrathbe23-blip/EmailJobScheduler
+      </a>
+      <div style="font-size: 10px; color: #64748b; margin-top: 3px;">Collaborators invited: <strong>Mitrajit</strong> &amp; <strong>Yadav036</strong></div>
+    </div>
+    <div class="link-card">
+      <div class="title">⚡ Backend API Health Endpoint</div>
+      <a href="https://reachinbox-scheduler-backend-5x7n.onrender.com/api/health" target="_blank">
+        https://reachinbox-scheduler-backend-5x7n.onrender.com/api/health
+      </a>
+    </div>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="section-title">2. Architectural Architecture &amp; Technology Stack</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Layer</th>
+        <th style="width: 35%;">Technology</th>
+        <th style="width: 40%;">Purpose &amp; Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Backend API</strong></td>
+        <td>TypeScript, Express.js</td>
+        <td>Modular REST architecture with typed controllers, middleware, and services.</td>
+      </tr>
+      <tr>
+        <td><strong>Persistent Queue</strong></td>
+        <td>BullMQ + Redis</td>
+        <td>Strictly <strong>NO CRON</strong>. Persistent delayed jobs with concurrency control and backoff retries.</td>
+      </tr>
+      <tr>
+        <td><strong>Database &amp; ORM</strong></td>
+        <td>PostgreSQL (Cloud) / SQLite (Local) via Prisma</td>
+        <td>Relational models for User, EmailJob, SenderConfig, and RateLimitEvent.</td>
+      </tr>
+      <tr>
+        <td><strong>Email Dispatcher</strong></td>
+        <td>Nodemailer + Ethereal SMTP</td>
+        <td>Simulated real SMTP email delivery with generated live web preview URLs.</td>
+      </tr>
+      <tr>
+        <td><strong>Rate Limiting</strong></td>
+        <td>Redis Atomic Sliding Counters</td>
+        <td>Per-sender hourly limits. Automatically reschedules overflow to next hour window.</td>
+      </tr>
+      <tr>
+        <td><strong>Slack Alerts</strong></td>
+        <td>Slack Webhook &amp; OAuth 2.0</td>
+        <td>Automated Block Kit notifications sent when sender hourly quota is reached.</td>
+      </tr>
+      <tr>
+        <td><strong>Search Engine</strong></td>
+        <td>Elasticsearch 8.x + DB Fallback</td>
+        <td>Full-text indexing of subject, body, sender, and recipient emails.</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend</strong></td>
+        <td>Next.js 14 (App Router), Tailwind CSS</td>
+        <td>Modern dark SaaS UI following Figma designs, real-time polling, empty states.</td>
+      </tr>
+      <tr>
+        <td><strong>Authentication</strong></td>
+        <td>Google OAuth 2.0 + Evaluator 1-Click</td>
+        <td>Real Google Identity verification with JWT sessions, plus fast reviewer sign-in.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Hard Constraints & Core Requirements Met -->
+  <div class="section-title">3. Compliance with Non-Negotiable Requirements</div>
+  <ul class="features-list">
+    <li><strong>❌ Absolutely No Cron:</strong> Scheduling relies entirely on BullMQ delayed jobs backed by Redis sorted sets (<span class="code-pill">zset</span>). Zero OS-level or node-cron libraries are used.</li>
+    <li><strong>🛡️ Server Restart Resilience:</strong> When the backend reboots, the <span class="code-pill">reconcilePendingJobsOnStartup()</span> engine scans all pending jobs in PostgreSQL/SQLite and synchronizes remaining delay offsets into BullMQ. Future jobs send on time without duplication.</li>
+    <li><strong>⏱️ Concurrency &amp; Throttling:</strong> Workers run with configurable concurrency (<span class="code-pill">WORKER_CONCURRENCY=5</span>) and enforce a mandatory inter-email delay (<span class="code-pill">DELAY_BETWEEN_EMAILS_MS</span>) to simulate provider throttling.</li>
+    <li><strong>🚦 Zero-Drop Rate Limiter:</strong> Rate limits are calculated using atomic Redis keys (<span class="code-pill">ratelimit:{sender}:{hourWindow}</span>). Over-limit jobs are safely rescheduled to the start of the next hour window rather than dropped.</li>
+    <li><strong>🔔 Live Slack Integration:</strong> Hitting a sender's rate limit triggers a rich Block Kit notification to their connected Slack channel. Also includes a manual "Send Live Alert" test button in the UI.</li>
+    <li><strong>📁 CSV Lead Parsing:</strong> The Compose modal accepts CSV/text files, extracts valid email addresses via regex, and displays the exact lead count with batch scheduling.</li>
+  </ul>
+
+  <!-- Verification Checklist -->
+  <div class="section-title">4. Feature Verification Matrix</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Requirement</th>
+        <th>Status</th>
+        <th>Implementation Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BullMQ Persistent Scheduler (No Cron)</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/queues/emailQueue.ts</span></td>
+      </tr>
+      <tr>
+        <td>Worker Concurrency &amp; Email Delay</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/queues/emailWorker.ts</span></td>
+      </tr>
+      <tr>
+        <td>Hourly Multi-Sender Rate Limiter</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/services/rateLimiter.ts</span></td>
+      </tr>
+      <tr>
+        <td>Server Restart Crash Recovery</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/services/schedulerService.ts</span></td>
+      </tr>
+      <tr>
+        <td>Live Slack Notification on Limit Hit</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/services/slackService.ts</span></td>
+      </tr>
+      <tr>
+        <td>Ethereal SMTP &amp; Web Previews</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/services/emailService.ts</span></td>
+      </tr>
+      <tr>
+        <td>BullMQ Live Web Dashboard</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/queues/bullBoard.ts (/admin/queues)</span></td>
+      </tr>
+      <tr>
+        <td>Elasticsearch Fast Search &amp; Indexing</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/services/searchService.ts</span></td>
+      </tr>
+      <tr>
+        <td>Google OAuth &amp; Evaluator Login</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">backend/src/controllers/authController.ts</span></td>
+      </tr>
+      <tr>
+        <td>Next.js 14 Dashboard + Compose CSV</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">frontend/src/app/dashboard/page.tsx</span></td>
+      </tr>
+      <tr>
+        <td>Docker Compose &amp; Render Cloud Deploy</td>
+        <td><span class="badge badge-success">COMPLETED</span></td>
+        <td><span class="code-pill">docker-compose.yml &amp; render.yaml</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    ReachInbox &bull; Outbox Labs Hiring Assignment &bull; Submitted by Tarun Chatrath &bull; Confidential
+  </div>
+
+</body>
+</html>
